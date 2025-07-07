@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.appcatalog.catalog.entities.Category;
-import com.appcatalog.repositories.CategoryRepository;
+import com.appcatalog.catalog.repositories.CategoryRepository;
 
 @Service //participa da injeção de dependência automatizada
 public class CategoryService {
