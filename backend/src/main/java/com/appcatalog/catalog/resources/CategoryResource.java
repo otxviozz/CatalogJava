@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.appcatalog.catalog.dto.CategoryDTO;
 import com.appcatalog.catalog.entities.Category;
 import com.appcatalog.catalog.services.CategoryService;
+import com.appcatalog.catalog.services.exceptions.EntityNotFoundException;
 
 @RestController
 @RequestMapping(value ="/categories")
@@ -28,7 +29,7 @@ public class CategoryResource {
 	
 	@GetMapping(value = "/{id}")
 	public ResponseEntity<CategoryDTO> findById(@PathVariable Long id){
-		CategoryDTO dto = service.findById(id);
+		CategoryDTO dto = service.findById(id);	
 		return ResponseEntity.ok().body(dto);
 	}
 }
